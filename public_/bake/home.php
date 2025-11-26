@@ -33,8 +33,9 @@ session_start();
 
     <nav class="main-nav">
         <ul>
-            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="home.php" class="active">Home</a></li>
             <li><a href="products.php">Products</a></li>
+            <li><a href="loginpage.php">login</a></li>
             <li class="has-dropdown">
                 <a href="categories.php">Categories</a>
                 <ul class="dropdown">
@@ -45,7 +46,7 @@ session_start();
                 </ul>
             </li>
             <li><a href="basket.php">Basket</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="loginpage.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
             <li><a href="contact.php">Contact</a></li>
             <li><a href="about.php">About</a></li>
@@ -53,7 +54,7 @@ session_start();
     </nav>
 
     <button id="theme-toggle" aria-label="Toggle light or dark mode">
-        Dark mode
+       Dark mode
     </button>
 </header>
 
@@ -200,14 +201,7 @@ session_start();
     </section>
 </main>
 
-<footer class="site-footer">
-    <div class="footer-content">
-        <p>Bakes & Cakes - Student Bakery Project</p>
-        <p>123 Example Street, Birmingham, UK</p>
-        <p>Email: <a href="mailto:bakesandcakes@contact.com">bakesandcakes@contact.com</a></p>
-        <p>&copy; <?php echo date('Y'); ?> Bakes & Cakes</p>
-    </div>
-</footer>
+<?php include '../components/footer.html'; ?>
 
 <script>
 // Simple light or dark mode toggle
