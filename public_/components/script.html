@@ -1,21 +1,22 @@
 <script>
-const checkbox = document.getElementById("darkSwitch");
-const body = document.body;
+    const darkSwitch = document.getElementById("darkSwitch");
 
-// Load saved theme
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.replace("light", "dark");
-    checkbox.checked = true;
-}
-
-// Toggle mode on change
-checkbox.addEventListener("change", () => {
-    if (checkbox.checked) {
-        body.classList.replace("light", "dark");
-        localStorage.setItem("theme", "dark");
-    } else {
-        body.classList.replace("dark", "light");
-        localStorage.setItem("theme", "light");
+    function updateTheme() {
+        if (darkSwitch.checked) {
+            document.body.classList.add("dark");
+            document.body.classList.remove("light");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+            localStorage.setItem("theme", "light");
+        }
     }
-});
+
+    darkSwitch.addEventListener("change", updateTheme);
+
+    if (localStorage.getItem("theme") === "dark") {
+        darkSwitch.checked = true;
+    }
+    updateTheme();
 </script>

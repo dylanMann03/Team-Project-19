@@ -8,6 +8,9 @@
     <link rel="icon" href="img/content.png" type="image/x-icon">
 </head>
 <body>
+    <body class="light">
+
+    
      <header id="main-header">
         <div class="header-container">
             <a href="index.html" class="logo-link">
@@ -22,13 +25,16 @@
                     <a href="recipes.html" class="nav-link">  <img src="img/ourbakes.png" alt="recipes" class="logo"></a>
                     <a href="loginpage.html" class="nav-link active"> <img src="img/login.png" alt="login" class="logo"></a>
                     <a href="register.html" class="nav-link"><img src="img/register.png" alt="register" class="logo"></a>
-                    <div class="theme-toggle">
-                            <input type="checkbox" id="darkSwitch">
-                            <label for="darkSwitch" class="toggle-container">
-                            <span class="toggle-circle"></span>
-                            </label>
-                    </div>
+                    
+                    
                 </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="darkSwitch">
+                    <label for="darkSwitch" class="toggle-container">
+                        <span class="toggle-circle"></span>
+                    </label>
+                </div>
+                
             </nav>
         </div>
     </header>
@@ -110,7 +116,35 @@
             <p>&copy; <span id="year"></span> Bakes&Cakes. All rights reserved.</p>
         </div>
     </footer>
-
+    <script>
+        const darkSwitch = document.getElementById("darkSwitch");
+    
+        function updateTheme() {
+            if (darkSwitch.checked) {
+                document.body.classList.add("dark");
+                document.body.classList.remove("light");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.body.classList.remove("dark");
+                document.body.classList.add("light");
+                localStorage.setItem("theme", "light");
+            }
+        }
+    
+        darkSwitch.addEventListener("change", updateTheme);
+    
+        if (localStorage.getItem("theme") === "dark") {
+            darkSwitch.checked = true;
+        }
+        updateTheme();
+    </script>
+    
+    <script src="js/app.js"></script>
+    </body>
+    </html>
+    
+    
+   
     <script src="js/app.js"></script>
 </body>
 </html>

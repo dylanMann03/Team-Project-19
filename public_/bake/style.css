@@ -1,16 +1,19 @@
-/* Logo Size */
+/* LOGO */
 .logo {
     width: 120px;
     height: auto;
 }
 
-/* Light Mode (default bakery theme) */
-body {
-    background-color: #fff6ec !important;
-    color: #222;
+/* -------------------------------- */
+/* LIGHT MODE (DEFAULT) */
+/* -------------------------------- */
+
+body.light {
+    background-color: #fff7ef;
+    color: #3b271d;
 }
 
-/* Bakery Form Container */
+/* FORM CONTAINER */
 .form-container {
     background: #ffffff;
     border-radius: 14px;
@@ -21,57 +24,36 @@ body {
     margin: 40px auto;
 }
 
-/* Bakery Titles */
 .form-container h1 {
-    color: #c97b4a !important;
+    color: #c97b4a;
     font-family: "Georgia", serif;
 }
 
 .form-container p {
-    color: #8c6f57 !important;
+    color: #8c6f57;
     margin-bottom: 15px;
 }
 
-/* Bakery Input Labels */
+/* Form Inputs */
 .form-group label {
-    color: #3b271d !important;
+    color: #3b271d;
     font-family: "Georgia", serif;
     font-weight: bold;
 }
 
-/* Bakery Inputs */
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"] {
+.form-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e6dacd !important;
+    border: 2px solid #e6dacd;
     border-radius: 8px;
-    background-color: #fffaf4 !important;
+    background-color: #fffaf4;
     font-size: 16px;
 }
 
-/* Input Focus */
-.form-group input:focus {
-    border-color: #3b271d !important;
-    box-shadow: 0 0 6px rgba(201, 123, 74, 0.25);
-    outline: none;
-}
-
-/* Forgot password link */
-.forgot-password a {
-    color: #3b271d !important;
-    font-size: 14px;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
-
-/* Bakery Submit Button */
+/* Submit Button */
 .submit-btn {
-    background-color: #3b271d !important;
-    color: white !important;
+    background-color: #3b271d;
+    color: white;
     font-size: 18px;
     padding: 12px;
     width: 100%;
@@ -82,41 +64,29 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #ce7934 !important;
+    background-color: #ce7934;
     transform: translateY(-2px);
 }
 
-/* Register Link Styling */
-.register-link {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.register-link a {
-    color: #3b271d !important;
-    font-weight: bold;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Bakery Theme */
+/* Footer */
 footer {
-    background-color: #c7934e !important;
+    background-color: #c7934e;
 }
 
 .footer-section h2,
 .footer-bottom a {
-    color: #fff6ec !important;
+    color: #fff6ec;
 }
 
 .social-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    object-fit: cover;
 }
+
+/* -------------------------------- */
+/* THEME TOGGLE SWITCH */
+/* -------------------------------- */
 
 .theme-toggle {
     display: flex;
@@ -124,29 +94,23 @@ footer {
     margin: 10px 20px;
 }
 
-/* Hide the checkbox */
+/* Hide checkbox */
 .theme-toggle input {
     display: none;
 }
 
-/* Slider background */
+/* Toggle background */
 .toggle-container {
     width: 70px;
     height: 34px;
-    background: #c7934e; /* caramel bakery color */
+    background: #c7934e;
     border-radius: 30px;
     position: relative;
     cursor: pointer;
     transition: background 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5px;
-    font-size: 14px;
-    user-select: none;
 }
 
-/* Circle */
+/* Toggle circle */
 .toggle-circle {
     width: 28px;
     height: 28px;
@@ -159,20 +123,42 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Icons inside toggle */
-.toggle-icons {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    pointer-events: none;
+/* When checked */
+#darkSwitch:checked + .toggle-container {
+    background: #3b271d;
 }
 
-/* When checked (dark mode) */
-.theme-toggle input:checked + .toggle-container {
-    background: #3b271d; /* dark chocolate */
-}
-
-.theme-toggle input:checked + .toggle-container .toggle-circle {
+#darkSwitch:checked + .toggle-container .toggle-circle {
     transform: translateX(36px);
-    background: #e0a675; /* lighter chocolate */
+    background: #e0a675;
 }
+
+/* -------------------------------- */
+/* DARK MODE */
+/* -------------------------------- */
+
+body.dark {
+    background: #1e1a18;
+    color: #f5d7b8;
+}
+
+body.dark .form-container {
+    background: #2b2420;
+    border-color: #555;
+}
+
+body.dark input {
+    background: #3b2e29;
+    color: #fff;
+    border-color: #666;
+}
+
+body.dark .submit-btn {
+    background: #e0a675;
+    color: #1e1a18;
+}
+
+body.dark footer {
+    background-color: #2a1f1c;
+}
+
