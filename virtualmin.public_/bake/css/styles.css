@@ -402,3 +402,91 @@ object-fit: cover;
         justify-content: center;
     }
 }
+body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, var(--bg--color), var(--accent--soft));
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: var(--card--bg);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .contact-container {
+        background: var(--bg--color);
+        color: var(--text--color);
+        padding: 30px;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        animation: slideUp 1s ease-out;
+    }
+
+    @keyframes slideUp {
+        from { transform: translateY(50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .contact-container h1 { 
+        grid-column: span 2;
+        text-align: center; 
+        color: var(--text--color);
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .contact-container label {
+        font-weight: bold;
+    }
+
+    .contact-container input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--card--bg);
+        transition: 0.3s ease;
+        resize: none;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #e0c7ac;
+        box-shadow: 0 0 8px rgba(79, 70, 229, 0.4);
+    }
+
+    .contact-container button {
+        background: #e0c7ac;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .contact-container button:hover {
+        background: var(--accent--dark);
+        transform: scale(1.05);
+    }
+
+    .info-box {
+        background: var(--card--bg);
+        border-radius: 10px;
+        padding: 20px;
+        animation: fadeIn 2s ease;
+        margin-left: 5px;
+    }
