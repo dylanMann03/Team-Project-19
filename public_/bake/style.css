@@ -4,9 +4,7 @@
     height: auto;
 }
 
-/* -------------------------------- */
-/* LIGHT MODE (DEFAULT) */
-/* -------------------------------- */
+
 
 body.light {
     background-color: #fff7ef;
@@ -84,9 +82,7 @@ footer {
     border-radius: 50%;
 }
 
-/* -------------------------------- */
-/* THEME TOGGLE SWITCH */
-/* -------------------------------- */
+
 
 .theme-toggle {
     display: flex;
@@ -133,9 +129,7 @@ footer {
     background: #e0a675;
 }
 
-/* -------------------------------- */
-/* DARK MODE */
-/* -------------------------------- */
+/*dark mode*/
 
 body.dark {
     background: #1e1a18;
@@ -161,4 +155,8 @@ body.dark .submit-btn {
 body.dark footer {
     background-color: #2a1f1c;
 }
+
+
+
+
 
