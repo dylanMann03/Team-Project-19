@@ -25,12 +25,13 @@ $current = basename($_SERVER['PHP_SELF']);
         <ul>
             <li><a href="home.php" class="<?= $current == 'home.php' ? 'active' : '' ?>">Home</a></li>
             <li><a href="bakes.php" class="<?= $current == 'bakes.php' ? 'active' : '' ?>">Products</a></li>
-            <li><a href="loginpage.php" class="<?= $current == 'loginpage.php' ? 'active' : '' ?>">Login</a></li>
            
             <li><a href="basket.php" class="<?= $current == 'basket.php' ? 'active' : '' ?>">Basket</a></li>
-            <li><a href="register.php" class="<?= $current == 'register.php' ? 'active' : '' ?>">Register</a></li>
+          
             <li><a href="contact.php" class="<?= $current == 'contact.php' ? 'active' : '' ?>">Contact</a></li>
             <li><a href="about.php" class="<?= $current == 'about.php' ? 'active' : '' ?>">About</a></li>
+             <li><a href="loginpage.php" class="<?= $current == 'loginpage.php' ? 'active' : '' ?>">Login</a></li>
+          <li><a href="register.php" class="<?= $current == 'register.php' ? 'active' : '' ?>">Register</a></li>
         </ul>
     </nav>
 
