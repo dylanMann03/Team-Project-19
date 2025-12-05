@@ -58,55 +58,8 @@ try {
     exit();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bakes & Cakes | Products</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- from /bake/ up to /css/ -->
-    <link rel="stylesheet" href="../css/Styles.css">
-</head>
-<body class="light">
+<?php include '../components/header.php'; ?>
 
-<header class="site-header">
-    <div class="logo-area">
-     
-        <img src="img/logo.png" alt="Bakes & Cakes logo" class="logo">
-        <div class="brand-text">
-            <h1>Bakes & Cakes</h1>
-            <p class="tagline">Your home for all your bakes and cakes</p>
-        </div>
-    </div>
-
-    <nav class="main-nav">
-        <ul>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="bakes.php" class="active">Products</a></li>
-
-            <!-- Top-level Categories goes to categories.php -->
-            <li class="has-dropdown">
-                <a href="../categories.php">Categories</a>
-                <ul class="dropdown">
-                    <li><a href="bakes.php?category=cakes">Cakes</a></li>
-                    <li><a href="bakes.php?category=cookies">Cookies</a></li>
-                    <li><a href="bakes.php?category=pastries">Pastries</a></li>
-                    <li><a href="bakes.php?category=bread">Bread</a></li>
-                </ul>
-            </li>
-
-            <li><a href="../basket.php">Basket</a></li>
-            <li><a href="../login.php">Login</a></li>
-            <li><a href="../register.php">Register</a></li>
-            <li><a href="../contact.php">Contact</a></li>
-            <li><a href="../about.php">About</a></li>
-        </ul>
-    </nav>
-
-    <button id="theme-toggle" aria-label="Toggle light or dark mode">
-        Dark mode
-    </button>
-</header>
 
 <main>
     <!-- Heading + intro -->
@@ -191,31 +144,9 @@ try {
     </section>
 </main>
 
-<footer class="site-footer">
-    <div class="footer-content">
-        <p>Bakes & Cakes - Student Bakery Project</p>
-        <p>123 Example Street, Birmingham, UK</p>
-        <p>Email: <a href="mailto:bakesandcakes@contact.com">bakesandcakes@contact.com</a></p>
-        <p>&copy; <?= date('Y'); ?> Bakes & Cakes</p>
-    </div>
-</footer>
 
-<script>
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
 
-toggleButton.addEventListener('click', function () {
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        toggleButton.textContent = 'Light mode';
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        toggleButton.textContent = 'Dark mode';
-    }
-});
-</script>
-
+<?php include '../components/footer.php'; ?>
+<?php include '../components/script.html'; ?>
 </body>
 </html>
