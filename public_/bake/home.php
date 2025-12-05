@@ -11,52 +11,9 @@ session_start();
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bakes & Cakes | Your home for all your bakes and cakes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="light">
+<?php include '../components/header.php'; ?>
 
-<header class="site-header">
-    <div class="logo-area">
-        
-        <img src="public_/bake/img/logo.png" alt="Bakes & Cakes logo" class="logo">
-        <div class="brand-text">
-            <h1>Bakes & Cakes</h1>
-            <p class="tagline">Your home for all your bakes and cakes</p>
-        </div>
-    </div>
-
-    <nav class="main-nav">
-        <ul>
-            <li><a href="home.php" class="active">Home</a></li>
-            <li><a href="products.php">Products</a></li>
-            <li><a href="loginpage.php">login</a></li>
-            <li class="has-dropdown">
-                <a href="categories.php">Categories</a>
-                <ul class="dropdown">
-                    <li><a href="products.php?category=cakes">Cakes</a></li>
-                    <li><a href="products.php?category=cookies">Cookies</a></li>
-                    <li><a href="products.php?category=pastries">Pastries</a></li>
-                    <li><a href="products.php?category=bread">Bread</a></li>
-                </ul>
-            </li>
-            <li><a href="basket.php">Basket</a></li>
-            <li><a href="loginpage.php">Login</a></li>
-            <li><a href="register.php">Register</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="about.php">About</a></li>
-        </ul>
-    </nav>
-
-    <button id="theme-toggle" aria-label="Toggle light or dark mode">
-       Dark mode
-    </button>
-</header>
+  
 
 <main>
     <!-- Hero section -->
@@ -201,25 +158,9 @@ session_start();
     </section>
 </main>
 
-<?php include '../components/footer.html'; ?>
+<?php include '../components/footer.php'; ?>
+<?php include '../components/script.html'; ?>
 
-<script>
-// Simple light or dark mode toggle
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
-
-toggleButton.addEventListener('click', function () {
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        toggleButton.textContent = 'Light mode';
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        toggleButton.textContent = 'Dark mode';
-    }
-});
-</script>
 
 </body>
 </html>
